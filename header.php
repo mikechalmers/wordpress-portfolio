@@ -21,7 +21,7 @@
     } elseif (is_single()) {
         echo '<meta name="description" content="'. trim(wp_title('', false)) . ' by Michael Chalmers">';
     } else {
-        echo '<meta name="description" content="Michael Chalmers artist'. trim(wp_title('', false)) . ' page">';
+        echo '<meta name="description" content="Michael Chalmers artist '. trim(wp_title('', false)) . ' page">';
     }
     ?>
     <!-- Global site tag (gtag.js) - Google Analytics -->
