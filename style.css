@@ -344,6 +344,8 @@ a:hover,
     left: 50%;
     transform: translate(-50%, 0);
 	font-size: 0.9em;
+	width: 100%;
+    text-align: center;
 }
 
 /* Next & previous buttons */
