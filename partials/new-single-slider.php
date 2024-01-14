@@ -4,7 +4,7 @@
         $fields = CFS()->get( 'images' );
         foreach ( $fields as $field ) { ?>
             <div class="mySlides fade">
-                <img src="<?php echo $field['image']; ?>" class="slide" alt="<?php echo $field['alt_text']; ?>" />
+                <img src="<?php echo $field['image']; ?>" class="slide" testing alt="<?php echo $field['alt_text']; ?>" />
             </div>
             
         <?php }
