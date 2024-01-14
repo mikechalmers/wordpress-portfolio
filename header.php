@@ -17,11 +17,11 @@
     <!-- Meta Description -->
     <?php
     if (is_home()) {
-        echo '<meta name="description" content="Art by Michael Chalmers, Edinburgh-born, London-based visual artist and photographer. Explore unique analogue-digital works that delve into themes of memory, identity, and the human condition.">';
+        echo '<meta name="description" content="Art by Michael Chalmers, Edinburgh-born, London-based visual artist and photographer. Unique analogue-digital works that delve into themes of memory, identity, and the human condition.">';
     } elseif (is_single()) {
         echo '<meta name="description" content="'. trim(wp_title('', false)) . ' by Michael Chalmers">';
     } else {
-        echo '<meta name="description" content="Michael Chalmers artist' . wp_title('', false) . ' page">';
+        echo '<meta name="description" content="Michael Chalmers artist'. trim(wp_title('', false)) . ' page">';
     }
     ?>
     <!-- Global site tag (gtag.js) - Google Analytics -->
