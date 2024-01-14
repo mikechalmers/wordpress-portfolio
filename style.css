@@ -360,6 +360,7 @@ a:hover,
 }
 
 .direction {
+	height: 3.5em;
 	transform: scale(1);
 	transition: 0.2s ease;
 }
