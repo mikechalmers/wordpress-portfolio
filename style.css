@@ -337,7 +337,8 @@ a:hover,
 }
 
 /* project header */
-.slideshow-container h1 {
+.slideshow-container h1,
+.image-container h1 {
 	position: absolute;
     bottom: 0;
     left: 50%;

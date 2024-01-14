@@ -22,6 +22,7 @@
                         <div class="image-box">
                             <?php the_post_thumbnail(); ?>
                         </div>
+                        <h1><?php the_title(); ?></h1>
                     </div>
                 <?php endif;
             endif;
@@ -30,7 +31,5 @@
         _e( 'Sorry, no pages matched your criteria.', 'textdomain' ); 
     endif; 
 ?>
-
-<h1><?php the_title(); ?></h1>
 
 </section>
