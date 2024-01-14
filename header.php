@@ -36,5 +36,5 @@
 
 <body class="fullheight">
     <header id="topbar" class="topbar">
-        <a href=<?php echo get_home_url(); ?>><img class="title-image" src="<?php bloginfo('template_directory'); ?>/images/michaelchalmers5.png" /></a>
+        <a href=<?php echo get_home_url(); ?>><img class="title-image" src="<?php bloginfo('template_directory'); ?>/images/michaelchalmers5.png" alt="Michael Chalmers" /></a>
     </header>
