@@ -325,9 +325,9 @@ a:hover,
 
 /* Slideshow container */
 .slideshow-container {
-	width: 90vw;
 	height: 100vh;
-	padding-top: 50px;
+	padding-block: 50px;
+	margin-inline: 5%;
 	box-sizing: border-box;
 	position: relative;
 	margin: auto;
@@ -360,12 +360,12 @@ a:hover,
 }
 
 .direction {
-	height: 3.5em;
+	transform: scale(1);
 	transition: 0.2s ease;
 }
 
 .direction:hover {
-	height: 3.8em;
+	transform: scale(1.1);
 }
 
 /* Fading animation */
