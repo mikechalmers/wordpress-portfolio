@@ -1,0 +1,531 @@
+/*
+Theme Name: Mike Chalmers Studio v3
+Author: Mike Chalmers
+Author URI: http://mikechalmers.co.uk
+Description: Bespoke photography showcase theme for Mike Chalmers' Studio
+License: Private
+Tags: Mike Chalmers, Photography, Studio, Gallery
+*/
+
+@import url("https://fonts.googleapis.com/css2?family=Work+Sans&display=swap");
+
+html,
+body,
+p {
+	margin: 0;
+	padding: 0;
+	font-family: "Work Sans", sans-serif;
+	font-size: 1.1em;
+	color: #111;
+}
+
+body {
+	touch-action: pan-y;
+}
+
+a:hover,
+.text-box a:hover {
+	color: #f1302f;
+}
+
+.topbar {
+	position: fixed;
+	width: 100vw;
+	height: 6vh;
+	display: flex;
+	justify-content: center;
+	align-items: flex-start;
+	margin-top: 10px;
+	z-index: 100;
+}
+.topbar a {
+	height: 100%;
+	border-bottom: none;
+}
+.topbar a img {
+	max-height: 100%;
+	min-height: 45px;
+}
+
+.links-list {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+	display: flex;
+	width: 100vw;
+	height: 75vh;
+	flex-wrap: wrap;
+	justify-content: space-around;
+	opacity: 0.9;
+	display: none;
+}
+.links-list li {
+	list-style: none;
+	display: inline-block;
+	flex: 50%;
+	padding: 1em;
+	box-sizing: border-box;
+}
+.links-list li a {
+	color: #111;
+	text-decoration: none;
+	z-index: 100;
+}
+.link-right {
+	text-align: right;
+}
+.link-bottom {
+	align-self: flex-end;
+}
+
+.video-container {
+	display: flex;
+	height: 85vh;
+	width: 100vw;
+	position: relative;
+	top: 10vh;
+	justify-content: center;
+	align-items: center;
+}
+.vimeo-container {
+	height: 100vh;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.image-container {
+	display: flex;
+	height: 94vh;
+	width: 100vw;
+	position: relative;
+	top: 6vh;
+	justify-content: center;
+	align-items: center;
+}
+
+.image-box {
+	height: 90%;
+	width: 90%;
+}
+
+.image-box img {
+	height: 100%;
+	width: 100%;
+}
+
+.image-box .size-post-thumbnail,
+.image-fit {
+	object-fit: scale-down;
+}
+
+#menu-links {
+	position: fixed;
+	z-index: 100;
+}
+#close-mobile-menu {
+  position: absolute;
+  top: 1em;
+  right: 1em;
+  color: #111;
+}
+
+.burger {
+	position: fixed;
+	right: 1em;
+	top: 1em;
+	display: none;
+	z-index: 50;
+}
+#burger-menu {
+	color: #f1302f;
+	text-decoration: none;
+	border-bottom: 2px solid #111;
+}
+.open-menu {
+	display: block !important;
+}
+
+/* gallery */
+
+.gallery-container {
+	display: flex;
+	padding-top: 150px;
+	/* min-height: calc(100vh - 150px); */
+	position: relative;
+	z-index: 50;
+}
+.gallery {
+	width: 100vw;
+	display: grid;
+	padding: 0 100px;
+	margin-bottom: 100px;
+	box-sizing: border-box;
+	grid-template-columns: repeat(4, 1fr);
+	gap: 70px;
+	grid-auto-rows: auto;
+}
+.item {
+	/* background-color: aliceblue; */
+	min-height: 50px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	cursor: pointer;
+}
+.item a {
+	flex: 1;
+	text-decoration: none;
+}
+.item img {
+	width: 100%;
+	height: auto;
+}
+.item p {
+	opacity: 0;
+	visibility: hidden;
+	position: relative;
+	transition: opacity 1s, visibility 1s;
+	color: #111;
+	display: inline;
+	box-sizing: border-box;
+	padding: 0.1em 0;
+	font-size: 00.9em;
+	line-height: 1.6em;
+}
+.item:hover p {
+	opacity: 1;
+	visibility: visible;
+}
+
+/* text */
+
+.text-box {
+	min-height: 100vh;
+	min-width: 100vw;
+	padding: 10%;
+	box-sizing: border-box;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+.text-box a {
+	text-decoration: none;
+	color: #111;
+	transition: 0.3s;
+	border-bottom: 2px solid #111;
+	padding-bottom: 2px;
+}
+
+.info-box {
+	display: flex;
+	flex-direction: column;
+	padding: 150px 1em 1em 1em;
+	box-sizing: border-box;
+	justify-content: center;
+	align-items: center;
+}
+.info-box a {
+	text-decoration: none;
+	color: #111;
+	transition: 0.3s;
+	border-bottom: 2px solid #111;
+	padding-bottom: 2px;
+}
+.info-box a:hover {
+	color: #f1302f;
+}
+.info-box p {
+	margin-bottom: 1em;
+	width: 50%;
+}
+
+/* editions */
+
+.editions-container {
+	display: flex;
+	flex-direction: column;
+	padding: 150px 1em 1em 1em;
+	box-sizing: border-box;
+}
+.single-edition {
+	height: 50vh;
+	width: 100%;
+	display: flex;
+	margin-bottom: 75px;
+}
+.edition-image {
+	width: 50%;
+	text-align: right;
+}
+.edition-link {
+	max-height: 100%;
+}
+.edition-image a img {
+	/* height: 100%;
+	width: 100%; */
+	max-width: 100%;
+	height: auto;
+	max-height: 50vh;
+	width: auto;
+}
+.edition-text {
+	width: 50%;
+	padding-left: 50px;
+	box-sizing: border-box;
+}
+.edition-title {
+	text-decoration: underline;
+	margin-bottom: 1.1em;
+}
+
+/* menu */
+
+.corner-link {
+	position: fixed;
+	z-index: 150;
+	margin: 1em;
+	text-decoration: none;
+	color: #111;
+	transition: 0.3s;
+	border-bottom: 3px solid #111;
+	padding-bottom: 2px;
+	font-size: 1.8em;
+}
+.top-left {
+	top: 0;
+	left: 0;
+}
+.top-right {
+	top: 0;
+	right: 0;
+}
+.bottom-left {
+	bottom: 0;
+	left: 0;
+}
+.bottom-right {
+	bottom: 0;
+	right: 0;
+}
+
+/* js slider */
+
+.mySlides {
+	display: none;
+	height: 90%;
+}
+.mySlides img {
+	max-height: 100%;
+	max-width: 100%;
+}
+.slide {
+	object-fit: contain;
+}
+
+/* Slideshow container */
+.slideshow-container {
+	width: 90vw;
+	height: 100vh;
+	padding-top: 50px;
+	box-sizing: border-box;
+	position: relative;
+	margin: auto;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+/* Next & previous buttons */
+.prev,
+.next {
+	cursor: pointer;
+	position: absolute;
+	top: calc(50% - 1.5em);
+	width: auto;
+	/* padding: 16px; */
+	color: #f1302f;
+	transition: 0.6s ease;
+	border-radius: 0 3px 3px 0;
+	user-select: none;
+}
+
+.prev {
+	left: 0;
+}
+/* Position the "next button" to the right */
+.next {
+	right: 0;
+	border-radius: 3px 0 0 3px;
+}
+
+.direction {
+	height: 3.5em;
+	transition: 0.2s ease;
+}
+
+.direction:hover {
+	height: 3.8em;
+}
+
+/* Fading animation */
+.fade {
+	-webkit-animation-name: fade;
+	-webkit-animation-duration: 0.5s;
+	animation-name: fade;
+	animation-duration: 0.5s;
+}
+
+.blurb {
+	height: 100%;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+@-webkit-keyframes fade {
+	from {
+		opacity: 0.8;
+	}
+	to {
+		opacity: 1;
+	}
+}
+@keyframes fade {
+	from {
+		opacity: 0.8;
+	}
+	to {
+		opacity: 1;
+	}
+}
+
+/* On smaller screens, decrease text size */
+@media only screen and (max-width: 300px) {
+	.prev,
+	.next {
+		font-size: 11px;
+	}
+}
+
+/* responsive */
+
+/* macbook */
+@media only screen and (max-width: 1500px) {
+	.gallery {
+		grid-template-columns: repeat(3, 1fr);
+		padding: 0 80px;
+		gap: 70px;
+	}
+}
+@media only screen and (max-width: 900px) {
+	.gallery {
+		grid-template-columns: repeat(2, 1fr);
+		padding: 0 40px;
+		gap: 60px;
+	}
+	.info-box p {
+		width: 70%;
+	}
+}
+/* mobile */
+@media only screen and (max-width: 600px) {
+	.topbar {
+		justify-content: flex-start;
+		padding-left: 10px;
+		box-sizing: border-box;
+		max-width: 60%;
+	}
+	.topbar img {
+		max-width: none;
+		max-height: none;
+		min-height: none;
+		min-width: none;
+		width: 100%;
+		height: auto;
+		object-fit: contain;
+	}
+	#menu-links {
+		background-color: #f1302f;
+		height: 100vh;
+		display: none;
+		transition: all 0.3s;
+	}
+	#menu-links a:hover {
+		color: #111;
+	}
+	.links-list {
+		display: flex;
+	}
+	.links-list li {
+		flex: 100%;
+		font-size: 3.5em;
+		height: 25%;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+	}
+	.link-right {
+		text-align: left;
+	}
+	/* .link-bottom {
+	} */
+	.mob-menu a {
+		border-bottom: 5px solid #111;
+		transition: none;
+	}
+	.burger {
+		display: block;
+	}
+	.gallery {
+		grid-template-columns: repeat(2, 1fr);
+		padding: 0 20px;
+		gap: 40px;
+	}
+	.corner-link,
+	.hide-menu {
+		display: none;
+	}
+	.slideshow-container,
+	.image-container {
+		height: 85vh;
+	}
+	.edition-image {
+		width: 100%;
+		text-align: center;
+	}
+	.edition-text {
+		width: 100%;
+		padding-left: 0;
+		margin-top: 15px;
+		font-size: 0.8em;
+	}
+	.edition-title {
+		margin-bottom: 0.8em;
+	}
+	.single-edition {
+		margin-bottom: 75px;
+		flex-direction: column;
+		height: auto;
+	}
+	.prev,
+	.next {
+		top: auto;
+		bottom: 0;
+	}
+	.info-box p {
+		width: 100%;
+	}
+  .item p {
+    display: none;
+  }
+}
+
+/* xs */
+@media only screen and (max-width: 400px) {
+	.gallery {
+		grid-template-columns: repeat(1, 1fr);
+		padding: 0 40px;
+		gap: 50px;
+	}
+}
