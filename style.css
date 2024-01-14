@@ -336,6 +336,15 @@ a:hover,
 	align-items: center;
 }
 
+/* project header */
+.slideshow-container h1 {
+	position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translate(-50%, 0);
+	font-size: 0.9em;
+}
+
 /* Next & previous buttons */
 .prev,
 .next {

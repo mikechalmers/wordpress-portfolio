@@ -22,6 +22,8 @@
             </div>
     <?php endif; ?>
 
+    <h1><?php the_title(); ?></h1>
+
     <a class="prev" onclick="plusSlides(-1)"><img class="direction" src="<?php bloginfo('template_directory'); ?>/images/left.png" alt="Previous Image" /></a>
     <a class="next" onclick="plusSlides(1)"><img class="direction" src="<?php bloginfo('template_directory'); ?>/images/right.png" alt="Next Image" /></a>
 </div>
